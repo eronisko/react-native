@@ -58,7 +58,7 @@ var ListViewSimpleExample = React.createClass({
           dataSource={this.state.dataSource}
           renderRow={this._renderRow}
           renderScrollComponent={props => <RecyclerViewBackedScrollView {...props} />}
-          renderSeparator={this._renderSeperator}
+          renderSeparator={this._renderSeparator}
         />
       </UIExplorerPage>
     );
@@ -100,7 +100,7 @@ var ListViewSimpleExample = React.createClass({
     )});
   },
 
-  _renderSeperator: function(sectionID: number, rowID: number, adjacentRowHighlighted: bool) {
+  _renderSeparator: function(sectionID: number, rowID: number, adjacentRowHighlighted: bool) {
     return (
       <View
         key={`${sectionID}-${rowID}`}
